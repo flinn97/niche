@@ -39,7 +39,7 @@ export default class KeepItem extends Component {
                 background: "linear-gradient(to bottom, " + styles.colors.Grey2 + ", #FFFFFF",
             }}>
                 {/* NAME */}
-                <Link to={"../" + switchCase.slice(4)+ "/" + app.state.componentList.getComponent(switchCase, picture.getJson().ogref, "_id")?.getJson()._id}
+                <Link to={"../" + switchCase.slice(4)+ "/" + app.state.componentList.getComponent(switchCase.slice(4), picture.getJson().ogref, "_id")?.getJson()._id}
                     style={{
                         fontFamily: styles.fonts.fontBold, display: "flex",
                         textAlign: "left", textTransform: "capitalize", fontSize: "2.2vh", marginLeft: ".2vw", flexWrap: "wrap",
@@ -55,7 +55,7 @@ export default class KeepItem extends Component {
 
                 }}>
 
-                    <Link to={"../" + switchCase.slice(4)+ "/" + app.state.componentList.getComponent(switchCase, picture.getJson().ogref, "_id")?.getJson()._id} style={{
+                    <Link to={"../" + switchCase.slice(4)+ "/" + app.state.componentList.getComponent(switchCase.slice(4), picture.getJson().ogref, "_id")?.getJson()._id} style={{
                         cursor: "pointer"
                     }}
 

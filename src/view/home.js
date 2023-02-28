@@ -88,7 +88,7 @@ export default class Home extends Component {
               )}
 
               {state.switchCase?.filter(obj => obj.feed === true).map((obj, index) =>
-                <Route path={obj.path + "/:id"} element={<obj.comp app={app} switchcase={obj.switchcase} />} />
+                <Route path={obj.path + "/:id"} element={<obj.comp app={app} switchcase={obj.switchcase} id={true}/>} />
 
               )}
               <Route path="/follow" element={<Keep app={app} switchcase="follow" />} />
