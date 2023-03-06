@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import authService from '../services/auth';
-import Registers from '../pics/STATSPAWN.png';
+import Registers from '../pics/golfClub.jpg';
 import Compressor from 'compressorjs';
 
 
@@ -128,7 +128,7 @@ export default class Register extends Component {
         let key =compJson?.collection? "update": "add";
         return(
                     <div style={{ display:"flex", flexDirection:"column", alignItems:"center", overflow:"scroll",
-                    width:"100%",  borderRadius:"10px, 10px, 10px, 10px", background:"white", opacity:"1", height:"90vh", padding:"1.8vh"}}>
+                    width:"100%",  borderRadius:"10px, 10px, 10px, 10px", background:"white", opacity:"1", height:"90vh", padding:"1.8vh", marginTop:"20px"}}>
                         <div style={{display:"flex", flexDirection:"column", alignItems:"center", width:"fit-content", height:"fit-content",
                         borderRadius:"2vw", marginTop: styles.margins.marginMediumH, background:styles.colors.Grey2 + "95", padding:"1vw", paddingRight:"4.5vw", paddingLeft:"4.5vw" }}>
                             <img 

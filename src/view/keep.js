@@ -3,7 +3,7 @@ import "../App.css"
 import Following from './follow';
 import Notes from './notes';
 import TrashCan from '../pics/trash-can.png';
-import Keeps from '../pics/keep.png';
+import Keeps from '../pics/golfClub.jpg';
 import EditQuill from '../pics/EditQuill.png';
 import ViewMedia from '../componentListNPM/viewMediaComponent';
 import { BrowserRouter, Route, Link, Routes } from "react-router-dom";

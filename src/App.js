@@ -9,14 +9,14 @@ import Dispatch from './dispatch';
 import ComponentListInterface from './componentListNPM/componentListInterface';
 import auth from './services/auth';
 import Feed from './view/feed';
-import Logo from './pics/spawnLogo.png'
+import Logo from './pics/golfLogo.png'
 import { BrowserRouter, Route, Link, Routes } from "react-router-dom";
 
 import styleService from './services/styleService';
 import MyContent from './view/myContent';
 import Keep from './view/keep';
-import SpawnPic from './pics/spawnPic.png';
-import KeepIcon from './pics/keep.png';
+import SpawnPic from './pics/golfClub.jpg';
+import KeepIcon from './pics/golfClub.jpg';
 import PictureUploader from './pictureUploader';
 //fonts
 
@@ -47,11 +47,10 @@ export default class App extends Component {
       switchCase:[
         {path:"/", comp: MyContent, name: "My Content", icon:SpawnPic, switchcase:"spawn",},
         {path:"/keep", comp:Keep, name: "My Keeps", switchcase:"keep", icon:KeepIcon},
-        {path:"/monsters", comp:Feed, name:"Monsters", feed:true, switchcase:"monsters"},
-        {path:"/heroes", comp:Feed, name:"Heroes", feed:true, switchcase:"heroes"},
-        {path:"/maps", comp:Feed, name:"Maps", feed:true, switchcase:"maps"},
-        {path:"/worlds", comp:Feed, name:"Worlds", feed:true, switchcase:"worlds"},
-        {path:"/statblocks", comp:Feed, name:"Statblocks", feed:true, switchcase:"statblocks"},
+        {path:"/clubs", comp:Feed, name:"Clubs", feed:true, switchcase:"clubs"},
+        {path:"/events", comp:Feed, name:"Events", feed:true, switchcase:"events"},
+        {path:"/courses", comp:Feed, name:"Courses", feed:true, switchcase:"courses"},
+        {path:"/meetups", comp:Feed, name:"Meetups", feed:true, switchcase:"meetups"},
         {path:"/all", comp:Feed, name:"All", feed:true, switchcase:"all"},
         
       ] ,

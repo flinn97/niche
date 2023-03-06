@@ -4,8 +4,8 @@ class styleService {
             let stylecolor = {
                 
                     ///colors
-                    color1: "teal",
-                    color2: "purple",
+                    color1: "#024C8E",
+                    color2: "#028858",
                     color3: "#491778",
                     color4: "#491778",
                     ///greyscales
@@ -305,7 +305,7 @@ class styleService {
                     stripRemainder: "fit-content",
 
                     imgHeight: "auto",
-                    imgWidth: "23.2vh",
+                    imgWidth: "5vw",
                     marginLeft: "1vw",
                     marginTop: ".89vh",
                     marginBottom: "1vh"
