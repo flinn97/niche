@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "dndtinder",
+    "site": "golfniche",
     "public": "build",
     "ignore": [
       "firebase.json",

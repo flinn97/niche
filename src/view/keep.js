@@ -136,7 +136,7 @@ export default class Keep extends Component {
                                 
               
                     
-                    View Keep</Link>
+                    View My Bag</Link>
                         <Link to="/follow" style=
           {{ 
             display: "flex", 
@@ -168,7 +168,7 @@ export default class Keep extends Component {
                     marginRight: styles.mySpawn.keepcardMargin, 
                     
                     }} src={Keeps} />
-            View Spawners</Link>
+            Following</Link>
 
           </div>
 

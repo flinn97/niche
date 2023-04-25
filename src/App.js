@@ -9,7 +9,7 @@ import Dispatch from './dispatch';
 import ComponentListInterface from './componentListNPM/componentListInterface';
 import auth from './services/auth';
 import Feed from './view/feed';
-import Logo from './pics/golfLogo.png'
+import Logo from './pics/Golficon.png'
 import { BrowserRouter, Route, Link, Routes } from "react-router-dom";
 
 import styleService from './services/styleService';
@@ -46,7 +46,7 @@ export default class App extends Component {
       listItems:[],
       switchCase:[
         {path:"/", comp: MyContent, name: "My Content", icon:SpawnPic, switchcase:"spawn",},
-        {path:"/keep", comp:Keep, name: "My Keeps", switchcase:"keep", icon:KeepIcon},
+        {path:"/keep", comp:Keep, name: "My Bag", switchcase:"keep", icon:KeepIcon},
         {path:"/clubs", comp:Feed, name:"Clubs", feed:true, switchcase:"clubs"},
         {path:"/events", comp:Feed, name:"Events", feed:true, switchcase:"events"},
         {path:"/courses", comp:Feed, name:"Courses", feed:true, switchcase:"courses"},

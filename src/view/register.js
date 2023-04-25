@@ -98,11 +98,14 @@ export default class Register extends Component {
 
         }
         debugger
-        let user =await authService.register(this.state.email, this.state.password)
+        let user =await authService.register(this.state.email.toLowerCase(), this.state.password)
         debugger
         if(user){
-            await this.props.app.state.currentComponent?.getOperationsFactory().componentDispatch({addemail:this.state.email, addhash: this.state.spawnerHandle+Math.floor(Math.random()*1000000), addspawnerHandle:this.state.spawnerHandle, addfirstName:this.state.firstName, addlastName:this.state.lastName, addbio:this.state.bio, addwebsite:this.state.website, addsocialHandle: this.state.socialHandle, add_id:this.state.email, addowner:this.state.email})
-            await this.props.app.state.currentComponent?.getPicSrc(this.state.path);
+            await this.props.app.state.currentComponent?.getOperationsFactory().componentDispatch({addemail:this.state.email.toLowerCase(), addhash: this.state.spawnerHandle+Math.floor(Math.random()*1000000), addspawnerHandle:this.state.spawnerHandle, addfirstName:this.state.firstName, addlastName:this.state.lastName, addbio:this.state.bio, addwebsite:this.state.website, addsocialHandle: this.state.socialHandle, add_id:this.state.email, addowner:this.state.email})
+            
+            if(this.state.path){
+                await this.props.app.state.currentComponent?.getPicSrc(this.state.path);
+            }
             await this.props.app.dispatch({ email: this.state.email})
             await this.props.app.state.currentComponent?.getOperationsFactory().run();
             this.props.app.dispatch({login:true, register:false, loginPage:false, registerPage:false, user:this.props.app.state.currentComponent})
@@ -137,7 +140,7 @@ export default class Register extends Component {
                         <div 
                         style={{display:"flex", flexDirection:"column",alignItems:"center", fontFamily: styles.fonts.fontTitle, marginTop: "-1vh", fontSize: styles.fonts.fontHeader5,}}>
                            
-                            Create Spawner Account
+                            Create GolfNiche Account
                              
                             </div>
 
@@ -178,7 +181,7 @@ export default class Register extends Component {
                             <label htmlFor="lastName">
                                 <div style={{fontFamily: styles.fonts.fontNormal, fontSize: styles.fonts.fontHeader1,
                                 marginBottom:".8vh",}}>
-                                Spawner Handle</div></label>
+                                Golf Handle</div></label>
                             <input style ={{...styles.inputStyle, width:"14vw"}} 
                             type="text" className="form-control" id="last"  minLength="3" maxLength="35" onChange={this.handleChange} name="spawnerHandle"/>
                         </div>

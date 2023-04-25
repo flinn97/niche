@@ -16,6 +16,27 @@ export default class Follower extends Component {
     let url = window.location.href;
     let splitUrl = url.split('/');
     let id = splitUrl[splitUrl.length-1];
+    let idChange="";
+    let lastChange = "";
+    if(id.includes("%")){
+      for(let letter of id){
+        if(letter==="%"){
+          idChange+=" ";
+          lastChange="%"
+        }
+        else{
+          if(lastChange==="%"){
+            lastChange="%2";
+            continue;
+          }
+          if(lastChange==="%2"){
+            lastChange="%20";
+            continue;
+          }
+          idChange+=letter
+        }
+      id = idChange}
+    }
     let comp = this.props.app.state.componentList.getComponent("user", id, "hash")
     if(comp){
       this.props.app.dispatch({currentFollowing: comp, myswitch: "following", });

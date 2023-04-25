@@ -1,7 +1,6 @@
 import { list } from "firebase/storage";
 import React, { Component } from "react";
-import left from '../pics/left.webp'
-import right from '../pics/right.webp'
+import arrow from '../pics/nicheGolfArrow.png'
 import VideoPlayer from "../componentListNPM/videoJS";
 //details my existingEmail.js component. creates some buttons that use methods embedded in props from the profile page. Choice will update the backend.
 class ViewPics extends Component {
@@ -82,11 +81,11 @@ class ViewPics extends Component {
   }} 
   ///ARROW LEFT
   style={{ display:"flex", flexDirection:"row", alignSelf:"center", width: styles.myFeed.arrowSizeW, height: "fit-content", marginRight: styles.myFeed.arrowMargin, 
-  cursor: this.state.index<=0 ?"":"pointer", alignContent:"center", filter: styles.mySpawn.satFilter,
+  cursor: this.state.index<=0 ?"":"pointer", alignContent:"center", filter: styles.mySpawn.satFilter, transform:"rotate(180deg)",
   opacity: this.state.index<=0 ? "0":"100",
   }} 
   
-  src={left} />
+  src={arrow} />
  
  {this.state.pic.toLowerCase().includes(".mov")?(<VideoPlayer 
  style={{overflowX: "hidden",
@@ -145,7 +144,7 @@ class ViewPics extends Component {
   height:"fit-content", marginLeft: styles.myFeed.arrowMargin, 
   cursor:"pointer",  display:"flex", flexDirection:"row", alignSelf:"center",
   opacity: this.state.index>=this.state.index+1 ? "0":"100",
-  }} src={right} /> 
+  }} src={arrow} /> 
   </div>
 
                 </div>

@@ -28,10 +28,10 @@ export default class Nav extends Component {
     
     let switchcase = app.state.switchcase;
     let dispatch= app.dispatch;
-    let handle = app.state.user.getJson().spawnerHandle;
-    let bio = app.state.user.getJson().bio;
-    let website = app.state.user.getJson().website;
-    let social = app.state.user.getJson().socialHandle;
+    let handle = app.state.user?.getJson()?.spawnerHandle;
+    let bio = app.state.user?.getJson()?.bio;
+    let website = app.state.user?.getJson()?.website;
+    let social = app.state.user?.getJson()?.socialHandle;
   return (
         <div style={{
           
@@ -55,7 +55,7 @@ export default class Nav extends Component {
                      
                      flexDirection:"column", alignItems:"center", fontFamily:styles.fonts.fontNormal, fontSize:"1.2vmin",
          alignSelf:"center", marginTop:styles.margins.marginMediumH, marginBottom: "-1.5vmax", }} >
-           <img src={state.user.getJson().picURL} style={{width:"9vmin", height:"9vmin", borderRadius:"50%", objectFit:"cover",}} />{handle} </div>
+           <img src={state.user?.getJson()?.picURL} style={{width:"9vmin", height:"9vmin", borderRadius:"50%", objectFit:"cover",}} />{handle} </div>
 
 {/* MENU ITEMS WHOLE */}
     <div style={{ display: "flex",

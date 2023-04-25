@@ -1,13 +1,12 @@
 import { Component } from 'react';
 import "../App.css"
 // import Gallery from './pictures';
-import left from '../pics/left.webp'
-import right from '../pics/right.webp'
+import arrow from '../pics/nicheGolfArrow.png'
 import picservice from '../services/picservice';
 
 import Notes from './comment';
-import Keep from '../pics/keep.png';
-import LikeHeart from '../pics/likeheart.webp';
+import Keep from '../pics/nicheBagGolf.png';
+import LikeHeart from '../pics/heartlikes.png';
 import styleService from '../services/styleService';
 import EditQuill from '../pics/EditQuill.png';
 import ViewMedia from '../componentListNPM/viewMediaComponent';
@@ -278,7 +277,7 @@ export default class Feed extends Component {
             dispatch({ pic: list[i], index: i, picChange: true })
           }} 
           ///ARROW LEFT
-          style={{ width: styles.myFeed.arrowSizeW, height: styles.myFeed.arrowSizeH, marginRight: styles.myFeed.arrowMargin, cursor:"pointer", }} src={left} />
+          style={{ width: styles.myFeed.arrowSizeW, height: styles.myFeed.arrowSizeH, marginRight: styles.myFeed.arrowMargin, cursor:"pointer", transform:"rotate(180deg)" }} src={arrow} />
 
           <ViewMedia  disablePlayButton= {true}  scale={1.05} media={this.getPic()} onClick={(obj)=>{
             debugger
@@ -337,7 +336,7 @@ export default class Feed extends Component {
           }}
 
           ///ARROW RIGHT
-          style={{ width: styles.myFeed.arrowSizeW, height: styles.myFeed.arrowSizeH, marginLeft: styles.myFeed.arrowMargin, cursor:"pointer" }} src={right} />
+          style={{ width: styles.myFeed.arrowSizeW, height: styles.myFeed.arrowSizeH, marginLeft: styles.myFeed.arrowMargin, cursor:"pointer" }} src={arrow} />
           
 
 

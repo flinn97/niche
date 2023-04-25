@@ -17,10 +17,10 @@ class styleService {
             
         };
         let fonts ={
-            fontNormal: 'Inria',
-            fontBold: 'InriaBold',
-            fontLight: 'InriaLight',
-            fontTitle:'Luminari',
+            fontNormal: 'OswaldMedium',
+            fontBold: 'OswaldBold',
+            fontLight: 'OswaldLight',
+            fontTitle:'OswaldLight',
             
             fontweightMain: "400",
             fontweightMenu: "600",
